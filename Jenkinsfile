@@ -89,7 +89,9 @@ node {
 
         break
 
-      case [utils.STAGE_BRANCH_NAME, utils.PROD_BRANCH_NAME]:
+      case "temp-test":
+      case utils.PROD_BRANCH_NAME:
+      case utils.STAGE_BRANCH_NAME:
         stage("Announce") {
           utils.announce_push()
         }
